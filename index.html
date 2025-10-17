@@ -10,9 +10,9 @@
     body {
       margin: 0;
       font-family: 'MedievalSharp', cursive;
-      background: radial-gradient(circle at center, #222 0%, #000 100%);
+      background: radial-gradient(circle at center, #000 0%, #111 100%);
       background-size: 400% 400%;
-      animation: ripple 12s ease-in-out infinite;
+      animation: ripple 20s ease infinite;
       color: white;
       text-align: center;
       min-height: 100vh;
@@ -22,15 +22,9 @@
     }
 
     @keyframes ripple {
-      0% {
-        background: radial-gradient(circle at center, #444 0%, #000 100%);
-      }
-      50% {
-        background: radial-gradient(circle at center, #111 0%, #000 100%);
-      }
-      100% {
-        background: radial-gradient(circle at center, #444 0%, #000 100%);
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .content {
