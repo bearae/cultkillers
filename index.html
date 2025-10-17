@@ -28,14 +28,8 @@
     }
 
     @keyframes glowRotate {
-      0% {
-        box-shadow: 0 0 10px rgba(200, 200, 200, 0.3), 0 0 20px rgba(200, 200, 200, 0.4);
-        transform: rotate(0deg);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(100, 100, 100, 0.3), 0 0 20px rgba(100, 100, 100, 0.4);
-        transform: rotate(360deg);
-      }
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .content {
@@ -88,17 +82,30 @@
     .avatar {
       width: 140px;
       height: 140px;
-      border-radius: 50%;
       background-color: #222;
       background-size: cover;
       background-position: center;
-      border: 4px solid lightgray;
+      border: 3px solid #fff;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       position: relative;
       margin-bottom: 80px;
+      overflow: visible;
+    }
+
+    .avatar::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: conic-gradient(lightgray, gray, lightgray);
       animation: glowRotate 6s linear infinite;
+      z-index: -1;
+      filter: blur(8px);
     }
 
     .avatar span {
@@ -138,6 +145,13 @@
         width: 100px;
         height: 100px;
         margin-bottom: 100px;
+      }
+
+      .avatar::before {
+        width: 120px;
+        height: 120px;
+        top: -10px;
+        left: -10px;
       }
 
       .avatar span {
