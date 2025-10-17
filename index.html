@@ -18,7 +18,6 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      position: relative;
       overflow-x: hidden;
     }
 
@@ -26,16 +25,6 @@
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
-    }
-
-    .est-label {
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      font-size: 1.2em;
-      color: rgba(255, 255, 255, 0.6);
-      font-family: 'MedievalSharp', cursive;
-      text-shadow: 1px 1px 2px #000;
     }
 
     .content {
@@ -115,6 +104,13 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
+    .music-player {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 2.8em;
@@ -143,17 +139,17 @@
       .avatars {
         gap: 40px;
       }
-
-      .est-label {
-        font-size: 1em;
-        top: 10px;
-        left: 15px;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="est-label">EST 2021</div>
+  <div class="music-player">
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=PLWn0RZzZKzvWJvXzZkYxZzYwZzYxZzYw&autoplay=1&loop=1&mute=0"
+      frameborder="0"
+      allow="autoplay"
+    ></iframe>
+  </div>
   <div class="content">
     <div class="header">
       <h1>CultKillers</h1>
