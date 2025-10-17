@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CultKillers</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Cinzel Decorative', serif;
+      font-family: 'Uncial Antiqua', cursive;
       background: radial-gradient(circle at center, #000 0%, #fff 100%);
       color: white;
       text-align: center;
@@ -20,30 +20,31 @@
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
-      text-shadow: 2px 2px 4px #000;
+      font-size: 4em;
+      margin-bottom: 0.1em;
+      text-shadow: 2px 2px 6px #000;
     }
 
     p.quote {
       font-size: 1.2em;
       font-style: italic;
+      margin-top: 0.2em;
       margin-bottom: 2em;
-      color: #ccc;
+      color: rgba(255, 255, 255, 0.6);
     }
 
     .avatars {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      max-width: 800px;
+      gap: 30px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background-color: #333;
       background-size: cover;
@@ -57,24 +58,25 @@
 
     .avatar span {
       position: absolute;
-      bottom: -25px;
-      font-size: 1em;
+      bottom: -28px;
+      font-size: 1.1em;
+      font-family: 'Uncial Antiqua', cursive;
       color: #fff;
       text-shadow: 1px 1px 2px #000;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2em;
+        font-size: 2.5em;
       }
 
       .avatar {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
       }
 
       .avatar span {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
     }
   </style>
