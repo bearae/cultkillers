@@ -1,0 +1,101 @@
+<!-- you can look at my src i dont mind -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNR | we are back.</title>
+    <link rel="icon" href="assets/snduBTy.png" type="image/png" sizes="100x100">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="enter-screen" id="enterScreen">
+        <div class="enter-content">
+            <span class="enter-text" id="enterBtn">click to enter</span>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="assets/song.ogg" type="audio/ogg">
+    </audio>
+
+    <div class="container" id="mainContainer">
+        <div class="profile-section">
+            <div class="profile-picture">
+                <img src="assets/NjU1Nm.jpg" alt="profile picture" class="main-pfp">
+            </div>
+            <h1 class="name">KNR</h1>
+        </div>
+
+        <div class="quote-section">
+            <p class="quote-text">KNR is back once again under NN x DIE's ownership</p>
+        </div>
+
+        <div class="button-container">
+            <button class="action-btn" id="rosterBtn">roster</button>
+            <button class="action-btn" id="socialsBtn">socials</button>
+        </div>
+
+        <div class="social-icons-container" id="socialIcons">
+            <button class="social-icon-btn discord-icon-btn" id="discordBtn">
+                <img src="assets/Q7%23pL9.svg" alt="discord" class="social-icon-img">
+            </button>
+            <button class="social-icon-btn telegram-icon-btn" id="telegramBtn">
+                <img src="assets/Z8%5EqN4.svg" alt="telegram" class="social-icon-img">
+            </button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="rosterPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>roster</h2>
+            </div>
+            
+            <div class="roster-section">
+                <h3 class="section-title">owners</h3>
+                <div class="roster-list">
+                    <div class="member-card">
+                        <img src="assets/3K9m%402.jpg" alt="die" class="member-avatar">
+                        <div class="member-info">
+                            <h4>dɨe̷ 💉</h4>
+                            <p>owner</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <img src="assets/F6%26mP1.jpg" alt="nn" class="member-avatar">
+                        <div class="member-info">
+                            <h4>NN</h4>
+                            <p>owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roster-section">
+                <h3 class="section-title">members</h3>
+                <div class="roster-list">
+                    <div class="member-card">
+                        <img src="assets/D7%23hY2.jpg" alt="xfax" class="member-avatar">
+                        <div class="member-info">
+                            <h4>xfax</h4>
+                            <p>member</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <img src="assets/B2%21kX5.jpg" alt="e6th" class="member-avatar">
+                        <div class="member-info">
+                            <h4>e6th</h4>
+                            <p>member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="close-btn" id="closeRoster">close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
