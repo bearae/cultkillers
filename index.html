@@ -53,7 +53,6 @@
       z-index: 9999;
       padding: 20px;
       text-align: center;
-      cursor: pointer;
     }
 
     .overlay h1 {
@@ -61,7 +60,6 @@
       font-size: 4em;
       color: white;
       margin-bottom: 20px;
-      pointer-events: none;
     }
 
     .overlay button {
@@ -72,7 +70,6 @@
       border: none;
       cursor: pointer;
       font-family: 'MedievalSharp', cursive;
-      pointer-events: none;
     }
 
     .blurred {
@@ -86,7 +83,7 @@
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
-      padding: 20px 20px 0;
+      padding: 30px 20px 0;
       opacity: 0;
       text-align: center;
     }
@@ -184,11 +181,11 @@
     }
 
     .telegram-link {
-      margin-top: -20px;
+      margin-top: -10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .telegram-link a {
@@ -210,9 +207,9 @@
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay" onclick="enterSite()">
+  <div class="overlay" id="overlay">
     <h1>CultKillers</h1>
-    <button>Click to Enter</button>
+    <button onclick="enterSite()">Click to Enter</button>
   </div>
 
   <div class="content blurred" id="mainContent">
@@ -251,5 +248,4 @@
       audio.style.display = "none";
       document.body.appendChild(audio);
 
-      const quote = document.getElementById("typing-quote");
-      quote.classList.add
+      const quote = document.getElementById("typing-
