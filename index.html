@@ -55,8 +55,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 9999;
       flex-direction: column;
+      z-index: 9999;
+    }
+
+    .intro h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      color: white;
+      margin-bottom: 20px;
     }
 
     .intro button {
@@ -67,7 +74,6 @@
       border: none;
       cursor: pointer;
       font-family: 'MedievalSharp', cursive;
-      margin-top: 20px;
     }
 
     .content {
@@ -76,6 +82,7 @@
       align-items: center;
       justify-content: center;
       padding-top: 40px;
+      opacity: 0;
       animation: fadeIn 2s ease forwards;
     }
 
@@ -212,7 +219,7 @@
 </head>
 <body>
   <div class="intro" id="introScreen">
-    <h1 style="font-family: 'Great Vibes', cursive; font-size: 4em; color: white;">CultKillers</h1>
+    <h1>CultKillers</h1>
     <button onclick="enterSite()">Click to Enter</button>
   </div>
 
@@ -226,24 +233,19 @@
     <p class="quote" id="typing-quote"></p>
     <div class="avatars">
       <div class="avatar" style="background-image: url('https://qu.ax/VhBif.jpeg');">
-        <span>EGGIE</span>
-        <div class="role">founder</div>
+        <span>EGGIE</span><div class="role">founder</div>
       </div>
       <div class="avatar" style="background-image: url('https://qu.ax/BTofc.jpeg');">
-        <span>BEAR</span>
-        <div class="role">captain</div>
+        <span>BEAR</span><div class="role">captain</div>
       </div>
       <div class="avatar" style="background-image: url('https://qu.ax/hqdSl.jpeg');">
-        <span>RYKU</span>
-        <div class="role">warrior</div>
+        <span>RYKU</span><div class="role">warrior</div>
       </div>
       <div class="avatar" style="background-image: url('https://qu.ax/YCAmX.jpeg');">
-        <span>PENTAR</span>
-        <div class="role">warrior</div>
+        <span>PENTAR</span><div class="role">warrior</div>
       </div>
       <div class="avatar" style="background-image: url('https://qu.ax/DSwrp.jpeg');">
-        <span>HAUNT</span>
-        <div class="role">warrior</div>
+        <span>HAUNT</span><div class="role">warrior</div>
       </div>
     </div>
   </div>
@@ -253,10 +255,7 @@
       document.getElementById('introScreen').style.display = 'none';
       const main = document.getElementById('mainContent');
       main.style.display = 'flex';
-      main.style.opacity = '0';
-      setTimeout(() => {
-        main.style.opacity = '1';
-      }, 50);
+      main.style.animation = 'fadeIn 2s ease forwards';
 
       const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9
+      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd
