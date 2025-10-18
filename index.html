@@ -208,6 +208,57 @@
       height: 50px;
       vertical-align: middle;
     }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 3.5em;
+      }
+
+      .overlay h1 {
+        font-size: 2.5em;
+      }
+
+      .overlay button {
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+      }
+
+      .quote {
+        font-size: 1.1em;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 60px;
+      }
+
+      .avatar::before {
+        width: 120px;
+        height: 120px;
+        top: -8px;
+        left: -8px;
+      }
+
+      .avatar span {
+        font-size: 1.1em;
+        bottom: -40px;
+      }
+
+      .avatar .role {
+        font-size: 0.9em;
+        bottom: -60px;
+      }
+
+      .telegram-link span {
+        font-size: 1.2em;
+      }
+
+      .telegram-link img.custom-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -227,8 +278,7 @@
       <div class="avatar" style="background-image: url('https://qu.ax/hqdSl.jpeg');"><span>RYKU</span><div class="role">warrior</div></div>
       <div class="avatar" style="background-image: url('https://qu.ax/YCAmX.jpeg');"><span>PENTAR</span><div class="role">warrior</div></div>
       <div class="avatar" style="background-image: url('https://qu.ax/DSwrp.jpeg');"><span>HAUNT</span><div class="role">warrior</div></div>
-    </div>
-    <div class="telegram-link">
+      <div class="telegram-link">
       <a href="https://t.me/CKpub" target="_blank" rel="noopener">
         <span>Telegram channel</span>
         <img src="https://qu.ax/vJpOB.png" alt="Telegram channel" class="custom-icon" />
