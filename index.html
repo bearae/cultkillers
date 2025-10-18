@@ -248,9 +248,9 @@
       document.getElementById('introScreen').style.display = 'none';
       const main = document.getElementById('mainContent');
       main.style.display = 'flex';
-      main.classList.add('fade-in');
+      setTimeout(() => {
+        main.classList.add('fade-in');
+      }, 50);
 
       const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&autoplay=1";
-      audio.width = "0";
-      audio.height = "0";
+      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&aut
