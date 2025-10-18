@@ -125,8 +125,11 @@
       overflow: hidden;
       border-right: 2px solid rgba(255, 255, 255, 0.6);
       width: 0;
-      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
       margin-bottom: 2em;
+    }
+
+    .quote.animate {
+      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
     }
 
     .avatars {
@@ -224,9 +227,9 @@
       audio.style.display = "none";
       document.body.appendChild(audio);
 
-      setTimeout(() => {
-        document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
-      }, 2000);
+      const quote = document.getElementById("typing-quote");
+      quote.textContent = "“Brevity is the soul of wit.”";
+      quote.classList.add("animate");
     }
   </script>
 </body>
