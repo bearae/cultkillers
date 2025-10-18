@@ -113,12 +113,6 @@
       text-shadow: 2px 2px 6px #000;
     }
 
-    .telegram-icon {
-      width: 40px;
-      height: 40px;
-      filter: grayscale(100%);
-    }
-
     .quote {
       font-family: 'Playfair Display', serif;
       font-size: 1.4em;
@@ -189,6 +183,22 @@
       font-size: 1em;
       color: rgba(255, 255, 255, 0.6);
     }
+
+    .telegram-link {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.2em;
+      color: white;
+      text-decoration: none;
+    }
+
+    .telegram-link img.custom-icon {
+      width: 50px;
+      height: 50px;
+    }
   </style>
 </head>
 <body>
@@ -200,9 +210,6 @@
   <div class="content blurred" id="mainContent">
     <div class="header">
       <h1>CultKillers</h1>
-      <a href="https://t.me/CKpub" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="telegram-icon" />
-      </a>
     </div>
     <p class="quote" id="typing-quote">“Brevity is the soul of wit.”</p>
     <div class="avatars">
@@ -211,6 +218,12 @@
       <div class="avatar" style="background-image: url('https://qu.ax/hqdSl.jpeg');"><span>RYKU</span><div class="role">warrior</div></div>
       <div class="avatar" style="background-image: url('https://qu.ax/YCAmX.jpeg');"><span>PENTAR</span><div class="role">warrior</div></div>
       <div class="avatar" style="background-image: url('https://qu.ax/DSwrp.jpeg');"><span>HAUNT</span><div class="role">warrior</div></div>
+    </div>
+    <div class="telegram-link">
+      <a href="https://t.me/CKpub" target="_blank" rel="noopener">
+        <img src="https://qu.ax/vJpOB.png" alt="Telegram channel" class="custom-icon" />
+        <span>Telegram channel</span>
+      </a>
     </div>
   </div>
 
