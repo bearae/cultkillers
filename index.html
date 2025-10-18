@@ -52,17 +52,18 @@
       justify-content: center;
       z-index: 9999;
       flex-direction: column;
+      padding: 20px;
     }
 
     .overlay h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 4em;
+      font-size: 3em;
       color: white;
       margin-bottom: 20px;
     }
 
     .overlay button {
-      font-size: 1.5em;
+      font-size: 1.2em;
       padding: 0.6em 1.2em;
       background: black;
       color: white;
@@ -82,7 +83,7 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 40px 20px;
+      padding: 20px;
       opacity: 0;
       text-align: center;
     }
@@ -95,28 +96,29 @@
     .header {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
       margin-bottom: 0.1em;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 5.5em;
+      font-size: 3.5em;
       font-weight: 400;
       margin: 0;
       text-shadow: 2px 2px 6px #000;
     }
 
     .telegram-icon {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       filter: grayscale(100%);
     }
 
     .quote {
       font-family: 'Playfair Display', serif;
-      font-size: 1.4em;
+      font-size: 1.2em;
       font-style: italic;
       color: rgba(255, 255, 255, 0.6);
       white-space: nowrap;
@@ -131,19 +133,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 60px;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 30px;
+      max-width: 100%;
     }
 
     .avatar {
-      width: 140px;
-      height: 140px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       background-color: #222;
       background-size: cover;
       background-position: center;
-      border: 3px solid #fff;
+      border: 2px solid #fff;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -157,19 +158,19 @@
       position: absolute;
       top: -10px;
       left: -10px;
-      width: 160px;
-      height: 160px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       background: conic-gradient(lightgray, gray, lightgray);
       animation: glowRotate 6s linear infinite;
       z-index: -1;
-      filter: blur(8px);
+      filter: blur(6px);
     }
 
     .avatar span {
       position: absolute;
       bottom: -50px;
-      font-size: 1.4em;
+      font-size: 1em;
       color: #fff;
       text-shadow: 1px 1px 2px #000;
       text-transform: uppercase;
@@ -177,8 +178,8 @@
 
     .avatar .role {
       position: absolute;
-      bottom: -75px;
-      font-size: 1em;
+      bottom: -70px;
+      font-size: 0.9em;
       color: rgba(255, 255, 255, 0.6);
     }
   </style>
