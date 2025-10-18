@@ -40,11 +40,6 @@
       50% { border-color: transparent; }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; filter: blur(10px); }
-      to { opacity: 1; filter: blur(0); }
-    }
-
     .overlay {
       position: fixed;
       top: 0;
@@ -91,7 +86,8 @@
     }
 
     .fade-in {
-      animation: fadeIn 2s ease forwards;
+      opacity: 1 !important;
+      filter: blur(0) !important;
     }
 
     .header {
@@ -183,46 +179,6 @@
       font-size: 1em;
       color: rgba(255, 255, 255, 0.6);
     }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 3.4em;
-      }
-
-      .telegram-icon {
-        width: 30px;
-        height: 30px;
-      }
-
-      .avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 100px;
-      }
-
-      .avatar::before {
-        width: 120px;
-        height: 120px;
-        top: -10px;
-        left: -10px;
-        border-radius: 50%;
-      }
-
-      .avatar span {
-        font-size: 1.2em;
-        bottom: -55px;
-      }
-
-      .avatar .role {
-        font-size: 0.9em;
-        bottom: -80px;
-      }
-
-      .avatars {
-        gap: 50px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -256,4 +212,16 @@
       main.classList.add('fade-in');
 
       const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videos
+      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&autoplay=1";
+      audio.width = "0";
+      audio.height = "0";
+      audio.allow = "autoplay; encrypted-media";
+      audio.allowFullscreen = true;
+      audio.style.display = "none";
+      document.body.appendChild(audio);
+
+      document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
+    }
+  </script>
+</body>
+</html>
