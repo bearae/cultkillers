@@ -52,6 +52,7 @@
       justify-content: center;
       z-index: 9999;
       flex-direction: column;
+      padding: 20px;
     }
 
     .overlay h1 {
@@ -61,12 +62,9 @@
       margin-bottom: 20px;
     }
 
-    .overlay button {
+    .overlay p {
       font-size: 1.5em;
-      padding: 0.6em 1.2em;
-      background: white;
-      color: black;
-      border: none;
+      color: white;
       cursor: pointer;
       font-family: 'MedievalSharp', cursive;
     }
@@ -81,8 +79,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 40px;
+      min-height: 100vh;
+      padding: 40px 20px;
       opacity: 0;
+      text-align: center;
     }
 
     .fade-in {
@@ -93,9 +93,10 @@
     .header {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 0.1em;
       justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 0.1em;
     }
 
     h1 {
@@ -129,9 +130,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 60px;
+      gap: 40px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin-top: 20px;
     }
 
     .avatar {
@@ -179,12 +180,55 @@
       font-size: 1em;
       color: rgba(255, 255, 255, 0.6);
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3em;
+      }
+
+      .quote {
+        font-size: 1.1em;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 100px;
+      }
+
+      .avatar::before {
+        width: 120px;
+        height: 120px;
+      }
+
+      .avatar span {
+        font-size: 1.2em;
+        bottom: -55px;
+      }
+
+      .avatar .role {
+        font-size: 0.9em;
+        bottom: -80px;
+      }
+
+      .avatars {
+        gap: 30px;
+      }
+
+      .overlay h1 {
+        font-size: 2.5em;
+      }
+
+      .overlay p {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="overlay" id="overlay">
     <h1>CultKillers</h1>
-    <button onclick="enterSite()">Click to Enter</button>
+    <p onclick="enterSite()">Click to Enter</p>
   </div>
 
   <div class="content blurred" id="mainContent">
@@ -212,16 +256,4 @@
       main.classList.add('fade-in');
 
       const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&autoplay=1";
-      audio.width = "0";
-      audio.height = "0";
-      audio.allow = "autoplay; encrypted-media";
-      audio.allowFullscreen = true;
-      audio.style.display = "none";
-      document.body.appendChild(audio);
-
-      document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
-    }
-  </script>
-</body>
-</html>
+      audio.src = "https://www.youtube.com/embed/videoseries?list=
