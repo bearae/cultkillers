@@ -40,53 +40,19 @@
       50% { border-color: transparent; }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .intro {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      z-index: 9999;
-    }
-
-    .intro h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4em;
-      color: white;
-      margin-bottom: 20px;
-    }
-
-    .intro button {
-      font-size: 1.5em;
-      padding: 0.6em 1.2em;
-      background: white;
-      color: black;
-      border: none;
-      cursor: pointer;
-      font-family: 'MedievalSharp', cursive;
+    .music-player {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
     }
 
     .content {
-      display: none;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding-top: 40px;
-      opacity: 0;
-    }
-
-    .fade-in {
-      animation: fadeIn 2s ease forwards;
     }
 
     .header {
@@ -221,12 +187,16 @@
   </style>
 </head>
 <body>
-  <div class="intro" id="introScreen">
-    <h1>CultKillers</h1>
-    <button onclick="enterSite()">Click to Enter</button>
+  <div class="music-player">
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&autoplay=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
   </div>
 
-  <div class="content" id="mainContent">
+  <div class="content">
     <div class="header">
       <h1>CultKillers</h1>
       <a href="https://t.me/CKpub" target="_blank" rel="noopener">
@@ -244,13 +214,9 @@
   </div>
 
   <script>
-    function enterSite() {
-      document.getElementById('introScreen').style.display = 'none';
-      const main = document.getElementById('mainContent');
-      main.style.display = 'flex';
-      setTimeout(() => {
-        main.classList.add('fade-in');
-      }, 50);
-
-      const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&aut
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
+    });
+  </script>
+</body>
+</html>
