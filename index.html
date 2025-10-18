@@ -8,8 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
   <link rel="icon" href="https://qu.ax/CKJCM.png" type="image/png">
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
       font-family: 'MedievalSharp', cursive;
       background: radial-gradient(circle at center, #000 0%, #111 100%);
@@ -17,6 +16,7 @@
       animation: ripple 20s ease infinite;
       color: white;
       text-align: center;
+      min-height: 100vh;
       overflow-x: hidden;
     }
 
@@ -48,10 +48,10 @@
       height: 100%;
       background: black;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
+      flex-direction: column;
       padding: 20px;
     }
 
@@ -62,12 +62,9 @@
       margin-bottom: 20px;
     }
 
-    .overlay button {
-      background-color: black;
-      color: white;
+    .overlay p {
       font-size: 1.5em;
-      padding: 0.6em 1.2em;
-      border: none;
+      color: white;
       cursor: pointer;
       font-family: 'MedievalSharp', cursive;
     }
@@ -222,7 +219,7 @@
         font-size: 2.5em;
       }
 
-      .overlay button {
+      .overlay p {
         font-size: 1.2em;
       }
     }
@@ -231,7 +228,7 @@
 <body>
   <div class="overlay" id="overlay">
     <h1>CultKillers</h1>
-    <button onclick="enterSite()">Click to Enter</button>
+    <p onclick="enterSite()">Click to Enter</p>
   </div>
 
   <div class="content blurred" id="mainContent">
@@ -258,4 +255,5 @@
       main.classList.remove('blurred');
       main.classList.add('fade-in');
 
-      document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
+      const audio = document.createElement('iframe');
+      audio.src = "https://www.youtube.com/embed/videoseries?list=
