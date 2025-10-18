@@ -54,6 +54,7 @@
       z-index: 9999;
       padding: 20px;
       text-align: center;
+      cursor: pointer;
     }
 
     .overlay h1 {
@@ -61,6 +62,7 @@
       font-size: 4em;
       color: white;
       margin-bottom: 20px;
+      pointer-events: none;
     }
 
     .overlay button {
@@ -71,6 +73,7 @@
       border: none;
       cursor: pointer;
       font-family: 'MedievalSharp', cursive;
+      pointer-events: none;
     }
 
     .blurred {
@@ -189,9 +192,9 @@
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay">
+  <div class="overlay" id="overlay" onclick="enterSite()">
     <h1>CultKillers</h1>
-    <button onclick="enterSite()">Click to Enter</button>
+    <button>Click to Enter</button>
   </div>
 
   <div class="content blurred" id="mainContent">
