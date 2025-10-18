@@ -53,7 +53,6 @@
       justify-content: center;
       z-index: 9999;
       padding: 20px;
-      cursor: pointer;
     }
 
     .overlay h1 {
@@ -63,9 +62,13 @@
       margin-bottom: 20px;
     }
 
-    .overlay p {
-      font-size: 1.5em;
+    .overlay button {
+      background-color: black;
       color: white;
+      font-size: 1.5em;
+      padding: 0.6em 1.2em;
+      border: none;
+      cursor: pointer;
       font-family: 'MedievalSharp', cursive;
     }
 
@@ -219,16 +222,16 @@
         font-size: 2.5em;
       }
 
-      .overlay p {
+      .overlay button {
         font-size: 1.2em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay" onclick="enterSite()">
+  <div class="overlay" id="overlay">
     <h1>CultKillers</h1>
-    <p>Click to Enter</p>
+    <button onclick="enterSite()">Click to Enter</button>
   </div>
 
   <div class="content blurred" id="mainContent">
@@ -256,6 +259,3 @@
       main.classList.add('fade-in');
 
       document.getElementById("typing-quote").textContent = "“Brevity is the soul of wit.”";
-
-      const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxo
