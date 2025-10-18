@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
   <link rel="icon" href="https://qu.ax/CKJCM.png" type="image/png">
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
       font-family: 'MedievalSharp', cursive;
       background: radial-gradient(circle at center, #000 0%, #111 100%);
@@ -16,7 +17,6 @@
       animation: ripple 20s ease infinite;
       color: white;
       text-align: center;
-      min-height: 100vh;
       overflow-x: hidden;
     }
 
@@ -53,6 +53,7 @@
       z-index: 9999;
       flex-direction: column;
       padding: 20px;
+      cursor: pointer;
     }
 
     .overlay h1 {
@@ -65,7 +66,6 @@
     .overlay p {
       font-size: 1.5em;
       color: white;
-      cursor: pointer;
       font-family: 'MedievalSharp', cursive;
     }
 
@@ -226,9 +226,9 @@
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay">
+  <div class="overlay" id="overlay" onclick="enterSite()">
     <h1>CultKillers</h1>
-    <p onclick="enterSite()">Click to Enter</p>
+    <p>Click to Enter</p>
   </div>
 
   <div class="content blurred" id="mainContent">
@@ -255,5 +255,4 @@
       main.classList.remove('blurred');
       main.classList.add('fade-in');
 
-      const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=
+      const audio = document.createElement('
