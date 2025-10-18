@@ -83,6 +83,9 @@
       justify-content: center;
       padding-top: 40px;
       opacity: 0;
+    }
+
+    .fade-in {
       animation: fadeIn 2s ease forwards;
     }
 
@@ -232,21 +235,11 @@
     </div>
     <p class="quote" id="typing-quote"></p>
     <div class="avatars">
-      <div class="avatar" style="background-image: url('https://qu.ax/VhBif.jpeg');">
-        <span>EGGIE</span><div class="role">founder</div>
-      </div>
-      <div class="avatar" style="background-image: url('https://qu.ax/BTofc.jpeg');">
-        <span>BEAR</span><div class="role">captain</div>
-      </div>
-      <div class="avatar" style="background-image: url('https://qu.ax/hqdSl.jpeg');">
-        <span>RYKU</span><div class="role">warrior</div>
-      </div>
-      <div class="avatar" style="background-image: url('https://qu.ax/YCAmX.jpeg');">
-        <span>PENTAR</span><div class="role">warrior</div>
-      </div>
-      <div class="avatar" style="background-image: url('https://qu.ax/DSwrp.jpeg');">
-        <span>HAUNT</span><div class="role">warrior</div>
-      </div>
+      <div class="avatar" style="background-image: url('https://qu.ax/VhBif.jpeg');"><span>EGGIE</span><div class="role">founder</div></div>
+      <div class="avatar" style="background-image: url('https://qu.ax/BTofc.jpeg');"><span>BEAR</span><div class="role">captain</div></div>
+      <div class="avatar" style="background-image: url('https://qu.ax/hqdSl.jpeg');"><span>RYKU</span><div class="role">warrior</div></div>
+      <div class="avatar" style="background-image: url('https://qu.ax/YCAmX.jpeg');"><span>PENTAR</span><div class="role">warrior</div></div>
+      <div class="avatar" style="background-image: url('https://qu.ax/DSwrp.jpeg');"><span>HAUNT</span><div class="role">warrior</div></div>
     </div>
   </div>
 
@@ -255,7 +248,9 @@
       document.getElementById('introScreen').style.display = 'none';
       const main = document.getElementById('mainContent');
       main.style.display = 'flex';
-      main.style.animation = 'fadeIn 2s ease forwards';
+      main.classList.add('fade-in');
 
       const audio = document.createElement('iframe');
-      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd
+      audio.src = "https://www.youtube.com/embed/videoseries?list=PLodFFqRDd8jRXxoY9HsvWHARqqnBwlHrk&autoplay=1";
+      audio.width = "0";
+      audio.height = "0";
